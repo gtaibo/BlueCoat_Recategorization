@@ -127,7 +127,7 @@ def main(url):
 
 
               
-    email: your_email@email.com
+    email = your_email@email.com
     trackid =  s.trackid
     jssid = s.req.headers["set-cookie"]
     
