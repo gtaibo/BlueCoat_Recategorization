@@ -14,7 +14,7 @@ Python script allows users to query the current categorization of a site via CLI
 Usage-
 Siterecat.py takes one argument and submits the query to get current categorization: 
 
-Important: Update line 133 with your e-mail address if you would like to receive a notification from Blue Coat. 
+Important: Update line 130 with your e-mail address if you would like to receive a notification from Blue Coat. 
 
 example: 
 
