@@ -12,7 +12,7 @@ https://sitereview.bluecoat.com/sitereview.jsp
 Python script allows users to query the current categorization of a site via CLI. After querying Site Review, it provides the user with an option to Re-Categorize the site. 
 
 Usage-
-Siterecat.py takes one argument and submits the query to get current categorization: 
+Siterecat.py takes one argument and submits the query to get current categorization. It also provides the option to recategorize by providing a menu of options available. Just enter the number corresponding to most appropriate category.
 
 Important: Update line 130 with your e-mail address if you would like to receive a notification from Blue Coat. 
 
