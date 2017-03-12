@@ -127,14 +127,14 @@ def main(url):
 
 
               
-
+    email: your_email@email.com
     trackid =  s.trackid
     jssid = s.req.headers["set-cookie"]
     
     url = "http://sitereview.bluecoat.com/rest/submitCategorization"
     origin = "http://sitereview.bluecoat.com"
     headers= {'Cookie':jssid, 'Accept':'application/json, text/javascript','User-Agent': 'Mozilla/5.0','X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://sitereview.bluecoat.com/sitereview.jsp'}
-    data= {'referrer':'bluecoatsg', 'suggestedcat':ans ,'suggestedcat2':ans ,'emailCheckBox':'on','email':'gtaibo9090@gmail.com' , 'emailcc':'','comments':'', 'overwrite':'no','trackid':trackid }
+    data= {'referrer':'bluecoatsg', 'suggestedcat':ans ,'suggestedcat2':ans ,'emailCheckBox':'on','email': email , 'emailcc':'','comments':'', 'overwrite':'no','trackid':trackid }
     r = requests.post(url, data, headers=headers)
 
     if r.status_code == 200:
