@@ -83,42 +83,46 @@ def main(url):
         
 
     
-
-    if  ans=="1":
-              print("\n Submitting as Dynamic DNS Host")
-              
+    if ans=="1":
+        print("\n Submitting as Dynamic DNS Host")
+        submitted_ans= "103"     
              
-    elif  ans=="2":
-              print("\n Submitting as Hacking")
-              
+    elif ans=="2":
+            print("\n Submitting as Hacking")
+            submitted_ans= "17"
              
-    elif  ans=="3":
-              print("\n Submitting as Malicious Outbound Data/Botnets")
-              
+    elif ans=="3":
+            print("\n Submitting as Malicious Outbound Data/Botnets")
+            submitted_ans= "44"
              
-    elif  ans=="4":
-              print("\n Submitting as Malicious Sources/Malnets") 
-              ans = None
+    elif ans=="4":
+            print("\n Submitting as Malicious Sources/Malnets") 
+            submitted_ans= "43"
 
-    elif  ans=="5":
-              print("\n Submitting as Mixed Content/Potentially Adult")
-
-    elif  ans=="6":
+    elif ans=="5":
+            print("\n Submitting as Mixed Content/Potentially Adult")
+            submitted_ans= "50"
+    elif ans=="6":
             print("\n Submitting as Peer-to-Peer (P2P)")
-    elif  ans=="7":
-              print("\n Submitting as Phishing")
-    elif  ans=="8":
-              print("\n Submitting as Pornography")
-
-    elif  ans=="9":
-              print("\n Submitting as Potentially Unwanted Software")
-
-    elif  ans=="10":
-              print("\n Submitting as Proxy Avoidance")
-    elif  ans=="11":
-              print("\n Submitting as Remote Access Tools")
-    elif  ans=="12":
-              print("\n Submitting as Suspicious")
+            submitted_ans= "83"
+    elif ans=="7":
+            print("\n Submitting as Phishing")
+            submitted_ans= "18"
+    elif ans=="8":
+            print("\n Submitting as Pornography")
+            submitted_ans= "3"
+    elif ans=="9":
+            print("\n Submitting as Potentially Unwanted Software")
+            submitted_ans= "102"
+    elif ans=="10":
+            print("\n Submitting as Proxy Avoidance")
+            submitted_ans= "86"
+    elif ans=="11":
+            print("\n Submitting as Remote Access Tools")
+            submitted_ans= "57"
+    elif ans=="12":
+            print("\n Submitting as Suspicious")
+            submitted_ans= "92"
 
     else:
             print("\n Not Valid Choice! Now Exiting...")
@@ -127,14 +131,14 @@ def main(url):
 
 
               
-    email = your_email@email.com
+    email = "your-email@yahoo.com"
     trackid =  s.trackid
     jssid = s.req.headers["set-cookie"]
     
     url = "http://sitereview.bluecoat.com/rest/submitCategorization"
     origin = "http://sitereview.bluecoat.com"
     headers= {'Cookie':jssid, 'Accept':'application/json, text/javascript','User-Agent': 'Mozilla/5.0','X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://sitereview.bluecoat.com/sitereview.jsp'}
-    data= {'referrer':'bluecoatsg', 'suggestedcat':ans ,'suggestedcat2':ans ,'emailCheckBox':'on','email': email , 'emailcc':'','comments':'', 'overwrite':'no','trackid':trackid }
+    data= {'referrer':'bluecoatsg', 'suggestedcat':submitted_ans ,'suggestedcat2':submitted_ans ,'emailCheckBox':'on','email': email , 'emailcc':'','comments':'', 'overwrite':'no','trackid':trackid }
     r = requests.post(url, data, headers=headers)
 
     if r.status_code == 200:
